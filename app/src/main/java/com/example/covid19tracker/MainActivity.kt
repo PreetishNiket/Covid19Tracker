@@ -48,6 +48,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
+
     private fun fetchResponse() {
         GlobalScope.launch {
             val response = withContext(Dispatchers.IO) { Client.api.clone().execute() }
@@ -61,6 +62,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
     private fun bindStateWiseData(subList: List<StatewiseItem>) {
         stateListAdapter = StateListAdapter(subList)
         list.adapter = stateListAdapter
@@ -73,4 +75,3 @@ class MainActivity : AppCompatActivity() {
         deceasedTv.text = data.deaths
     }
 }
-////

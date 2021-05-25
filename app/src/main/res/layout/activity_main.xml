@@ -259,7 +259,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/topcover"
             android:paddingLeft="16dp"
-
+            tools:listitem="@layout/list_item"
             android:paddingRight="16dp"
             android:background="@android:color/transparent"
             tools:listheader="@layout/list_header" />

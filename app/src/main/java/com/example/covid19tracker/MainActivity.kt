@@ -22,11 +22,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         supportActionBar?.hide()
 
-        //fetching
         list.addHeaderView(
             LayoutInflater.from(this)
-                .inflate(R.layout.list_header, list, false)
-        )
+                .inflate(R.layout.list_header, list, false))
+        //fetching
         fetchResponse()
         swipeToRefresh.setOnRefreshListener {
             fetchResponse()
@@ -37,13 +36,14 @@ class MainActivity : AppCompatActivity() {
                 view: AbsListView,
                 firstVisibleItem: Int,
                 visibleItemCount: Int,
-                totalItemCount: Int
-            ) {
+                totalItemCount: Int) {
+
                 if (list.getChildAt(0) != null) {
                     swipeToRefresh.isEnabled =
                         list.firstVisiblePosition == 0 && list.getChildAt(0).top == 0
                 }
             }
+
         })
     }
 

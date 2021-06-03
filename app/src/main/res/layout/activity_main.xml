@@ -255,18 +255,20 @@
 
         <ListView
             android:id="@+id/list"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="358dp"
             android:layout_below="@+id/topcover"
-            android:paddingLeft="16dp"
-            tools:listitem="@layout/list_item"
-            android:paddingRight="16dp"
+            android:layout_marginTop="24dp"
             android:background="@android:color/transparent"
-            tools:listheader="@layout/list_header" />
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            tools:listheader="@layout/list_header"
+            tools:listitem="@layout/list_item" />
+
         <androidx.coordinatorlayout.widget.CoordinatorLayout
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="399dp"
+            android:layout_height="355dp"
             android:layout_alignParentBottom="true">
 
             <!-- Main content -->
@@ -275,10 +277,10 @@
                 android:id="@+id/Tracker_fab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
                 android:layout_gravity="bottom|end"
-                android:elevation="30dp"
+                android:layout_margin="16dp"
                 android:backgroundTint="#75292f"
+                android:elevation="30dp"
                 android:textAllCaps="false"
                 app:icon="@drawable/virus"
                 app:rippleColor="@color/recovered" />
@@ -295,8 +297,8 @@
                 android:elevation="30dp"
                 android:text="Crucial"
                 android:textAllCaps="false"
-                android:visibility="invisible"
                 android:textColor="@color/white"
+                android:visibility="invisible"
                 app:iconTint="@color/recovered"
                 app:rippleColor="@color/recovered" />
             <!--                app:icon="@drawable/ic_essentials"-->
@@ -309,14 +311,14 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="134dp"
                 android:backgroundTint="@color/fab_extras"
-                android:textColor="@color/white"
-                app:iconTint="@color/recovered"
                 android:elevation="30dp"
                 android:text="Prevention"
                 android:textAllCaps="false"
+                android:textColor="@color/white"
                 android:visibility="invisible"
+                app:iconTint="@color/recovered"
                 app:rippleColor="@color/recovered" />
-<!--            app:icon="@drawable/ic_prevention"-->
+            <!--            app:icon="@drawable/ic_prevention"-->
 
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                 android:id="@+id/Symptoms_fab"
@@ -324,38 +326,56 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
                 android:layout_marginEnd="16dp"
-                android:textColor="@android:color/white"
-                app:iconTint="@color/recovered"
-
                 android:layout_marginBottom="188dp"
                 android:backgroundTint="@color/fab_extras"
 
                 android:elevation="30dp"
                 android:text="Symptoms"
+
                 android:textAllCaps="false"
+                android:textColor="@android:color/white"
                 android:visibility="invisible"
+                app:iconTint="@color/recovered"
 
 
                 app:rippleColor="@color/recovered" />
-<!--            app:icon="@drawable/ic_symptoms"-->
+            <!--            app:icon="@drawable/ic_symptoms"-->
 
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                 android:id="@+id/About_fab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
-                android:textColor="@color/white"
-                app:iconTint="@color/recovered"
-
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="242dp"
-                android:backgroundTint="@color/fab_extras"
 
+                android:backgroundTint="@color/fab_extras"
                 android:elevation="30dp"
                 android:text="Covid-19"
+
                 android:textAllCaps="false"
+                android:textColor="@color/white"
                 android:visibility="invisible"
                 app:icon="@drawable/virus"
+                app:iconTint="@color/recovered"
+                app:rippleColor="@color/recovered" />
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/Vaccine_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="299dp"
+
+                android:backgroundTint="@color/fab_extras"
+                android:elevation="30dp"
+                android:text="Vaccine Slots"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:visibility="invisible"
+                app:icon="@drawable/virus"
+                app:iconTint="@color/recovered"
                 app:rippleColor="@color/recovered" />
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>

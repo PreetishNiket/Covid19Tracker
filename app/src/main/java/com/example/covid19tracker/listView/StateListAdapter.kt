@@ -15,25 +15,26 @@ class StateListAdapter(private val list: List<StatewiseItem>) : BaseAdapter() {
             .inflate(R.layout.list_item, parent, false)
         val item = list[position]
 
-        view.confirmedTv.text = SpannableDelta(
-            "${item.confirmed}\n ↑ ${item.deltaconfirmed ?: "0"}",
-            "#D32F2F",
-            item.confirmed?.length ?: 0
-        )
-
+        view.confirmedTv.apply {
+            text = SpannableDelta(
+                "${item.confirmed}\n ↑ ${item.deltaconfirmed ?: "0"}",
+                "#4E7CFF",
+                item.confirmed?.length ?: 0
+            )
+        }
         view.activeTv.text = SpannableDelta(
             "${item.active}\n ↑ ${item.deltaactive ?: "0"}",
-            "#1976D2",
+            "#7033FF",
             item.confirmed?.length ?: 0
         )
         view.recoveredTv.text = SpannableDelta(
             "${item.recovered}\n ↑ ${item.deltarecovered ?: "0"}",
-            "#388E3C",
+            "#F65164",
             item.recovered?.length ?: 0
         )
         view.deceasedTv.text = SpannableDelta(
             "${item.deaths}\n ↑ ${item.deltadeaths ?: "0"}",
-            "#FBC02D",
+            "#7A1C7B",
             item.deaths?.length ?: 0
         )
         view.stateTv.text = item.state

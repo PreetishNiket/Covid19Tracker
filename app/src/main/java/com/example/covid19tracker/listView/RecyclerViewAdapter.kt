@@ -3,12 +3,14 @@ package com.example.covid19tracker.listView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.covid19tracker.R
 import com.example.covid19tracker.dataClass.SlotModal
 
-class RecyclerViewAdapter(val list:List<SlotModal>):RecyclerView.Adapter<RecyclerViewAdapter.DetailsViewHolder>(){
+class RecyclerViewAdapter(private val list:List<SlotModal>):RecyclerView.Adapter<RecyclerViewAdapter.DetailsViewHolder>(){
 
     inner class DetailsViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
         val centerNameTV: TextView = itemView.findViewById(R.id.idTVCenterName)
@@ -26,16 +28,16 @@ class RecyclerViewAdapter(val list:List<SlotModal>):RecyclerView.Adapter<Recycle
     }
 
     override fun onBindViewHolder(holder: DetailsViewHolder, position: Int) {
-           val currentItem=list[position]
-            holder.apply {
-                centerNameTV.text=currentItem.centerName
-                holder.centerAddressTV.text = currentItem.centerAddress
-                holder.centerTimings.text = ("From : " + currentItem.centerFromTime + " To : " + currentItem.centerToTime)
-                holder.vaccineNameTV.text = currentItem.vaccineName
-                holder.centerAgeLimitTV.text = "Age Limit : " + currentItem.ageLimit.toString()
-                holder.centerFeeTypeTV.text = currentItem.fee_type
-                holder.avalabilityTV.text = "Availability : " + currentItem.availableCapacity.toString()
-            }
+        val currentItem=list[position]
+        holder.apply {
+            centerNameTV.text=currentItem.centerName
+            holder.centerAddressTV.text = currentItem.centerAddress
+            holder.centerTimings.text = ("From : " + currentItem.centerFromTime + " To : " + currentItem.centerToTime)
+            holder.vaccineNameTV.text = currentItem.vaccineName
+            holder.centerAgeLimitTV.text = "Age Limit : " + currentItem.ageLimit.toString()
+            holder.centerFeeTypeTV.text = currentItem.fee_type
+            holder.avalabilityTV.text = "Availability : " + currentItem.availableCapacity.toString()
+        }
     }
 
     override fun getItemCount():Int=list.size

@@ -183,7 +183,7 @@ class MainActivity : AppCompatActivity() {
 
         val lastUpdatedTime = data.lastupdatedtime
         val simpleDateFormat = SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
-        lastUpdatedTv.text = "Last Updated\n ${getTimeAgo(simpleDateFormat.parse(lastUpdatedTime))}"
+        lastUpdatedTv.text = "Last Updated ${getTimeAgo(simpleDateFormat.parse(lastUpdatedTime))}"
 
     }
 

@@ -62,7 +62,8 @@ class VaccineActivity : AppCompatActivity() {
     }
 
     private fun getAppointments(pinCode: String, date: String) {
-        val url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode=" + pinCode + "&date=" + date
+        val url =
+            "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode=$pinCode&date=$date"
         val queue = Volley.newRequestQueue(this)
 
         // on below line we are creating a request

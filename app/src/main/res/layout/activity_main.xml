@@ -6,13 +6,13 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@color/white"
 
     android:orientation="vertical">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/background">
+        android:background="#fff">
 
         <RelativeLayout
             android:id="@+id/topcover"
@@ -61,7 +61,7 @@
                 android:fontFamily="sans-serif"
                 android:text="COVID-19 "
                 android:textAllCaps="true"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/holo_red_light"
                 android:textSize="19sp"
                 android:textStyle="bold" />
 <!--            <ImageView&ndash;&gt;-->
@@ -259,7 +259,7 @@
             android:layout_height="358dp"
             android:layout_below="@+id/topcover"
             android:layout_marginTop="24dp"
-            android:background="@android:color/transparent"
+            android:background="@color/white"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             tools:listheader="@layout/list_header"

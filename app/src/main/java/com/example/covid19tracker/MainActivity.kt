@@ -7,11 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.AbsListView
+
 import com.example.covid19tracker.dataClass.Response
 import com.example.covid19tracker.dataClass.StatewiseItem
 import com.example.covid19tracker.listView.StateListAdapter
 import com.example.covid19tracker.networking.Client
 import com.google.gson.Gson
+
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -23,7 +25,7 @@ import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
     private lateinit var stateListAdapter: StateListAdapter
-    var isOpen =false
+    var isOpen = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -128,7 +130,6 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
-
         list.addHeaderView(
             LayoutInflater.from(this)
                 .inflate(R.layout.list_header, list, false)
@@ -140,20 +141,16 @@ class MainActivity : AppCompatActivity() {
         }
         list.setOnScrollListener(object : AbsListView.OnScrollListener {
             override fun onScrollStateChanged(view: AbsListView, scrollState: Int) {}
-            override fun onScroll(
-                view: AbsListView,
-                firstVisibleItem: Int,
-                visibleItemCount: Int,
-                totalItemCount: Int
-            ) {
+            override fun onScroll(view: AbsListView, firstVisibleItem: Int, visibleItemCount: Int, totalItemCount: Int) {
 
                 if (list.getChildAt(0) != null) {
                     swipeToRefresh.isEnabled =
-                        list.firstVisiblePosition == 0 && list.getChildAt(0).top == 0
+                       list.firstVisiblePosition == 0 && list.getChildAt(0).top == 0
                 }
             }
 
         })
+
     }
 
     private fun fetchResponse() {
@@ -176,14 +173,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun bindCombinedData(data: StatewiseItem) {
-        confirmedTv.text = data.confirmed
-        activeTv.text = data.active
-        recoveredTv.text = data.recovered
-        deceasedTv.text = data.deaths
+        confirmedTv?.text = data.confirmed
+        activeTv?.text = data.active
+       recoveredTv?.text = data.recovered
+        deceasedTv?.text = data.deaths
 
         val lastUpdatedTime = data.lastupdatedtime
         val simpleDateFormat = SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
-        lastUpdatedTv.text = "Last Updated ${getTimeAgo(simpleDateFormat.parse(lastUpdatedTime))}"
+        lastUpdatedTv?.text = "Last Updated ${getTimeAgo(simpleDateFormat.parse(lastUpdatedTime))}"
 
     }
 

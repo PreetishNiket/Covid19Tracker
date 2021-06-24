@@ -2,10 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-
     android:orientation="horizontal">
-
 
     <TextView
         android:layout_width="0dp"
@@ -14,7 +11,7 @@
         android:padding="8dp"
         android:text="STATE/UT"
         android:textAllCaps="true"
-
+        android:background="#EDF1F5"
         android:textColor="#f21105"
         android:textStyle="bold" />
 
@@ -26,7 +23,7 @@
         android:text="C"
         android:textAlignment="center"
         android:textAllCaps="true"
-
+        android:background="#EDF1F5"
         android:textColor="@color/confirmed"
         android:textStyle="bold" />
 
@@ -34,9 +31,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-
         android:padding="8dp"
         android:text="A"
+        android:background="#EDF1F5"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/active"
@@ -47,9 +44,9 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:padding="8dp"
+        android:background="#EDF1F5"
         android:text="R"
         android:textAlignment="center"
-
         android:textAllCaps="true"
         android:textColor="@color/recovered"
         android:textStyle="bold" />
@@ -60,8 +57,8 @@
         android:layout_weight="1"
         android:padding="8dp"
         android:text="D"
+        android:background="#EDF1F5"
         android:textAlignment="center"
-
         android:textAllCaps="true"
         android:textColor="@color/deceased"
         android:textStyle="bold" />

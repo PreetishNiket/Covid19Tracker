@@ -5,8 +5,9 @@
     android:layout_width="match_parent"
     app:cardElevation="80dp"
     app:cardCornerRadius="15dp"
-    app:cardBackgroundColor="@color/white"
+    app:cardBackgroundColor="#3CE3B4"
     android:layout_height="wrap_content"
+
     android:layout_margin="4dp">
 
     <RelativeLayout
@@ -20,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="3dp"
             android:drawablePadding="4dp"
-            android:padding="3dp"
+            android:padding="5dp"
             android:text="Center Name"
             android:textColor="#000"
             app:drawableLeftCompat="@drawable/ic__hospital" />
@@ -33,7 +34,7 @@
             android:layout_below="@id/idTVCenterName"
             android:layout_margin="3dp"
             android:drawablePadding="4dp"
-            android:padding="3dp"
+            android:padding="5dp"
             android:text="Center Address"
             android:textColor="#000"
             app:drawableLeftCompat="@drawable/ic_location" />
@@ -46,7 +47,7 @@
             android:layout_below="@id/idTVCenterAddress"
             android:layout_margin="3dp"
             android:drawablePadding="4dp"
-            android:padding="3dp"
+            android:padding="5dp"
             android:text="Timings"
             android:textColor="@color/black"
             app:drawableLeftCompat="@drawable/ic_time" />
@@ -68,7 +69,7 @@
                 android:layout_weight="1"
                 android:drawableLeft="@drawable/ic_vaccine"
                 android:drawablePadding="4dp"
-                android:padding="3dp"
+                android:padding="5dp"
                 android:text="Vaccine Name"
                 android:textColor="@color/black" />
 
@@ -80,7 +81,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="3dp"
                 android:layout_weight="1"
-                android:padding="3dp"
+                android:padding="5dp"
                 android:text="Fee Type"
                 android:textAlignment="center"
                 android:textColor="@color/black" />
@@ -102,7 +103,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="3dp"
                 android:layout_weight="1"
-                android:padding="3dp"
+                android:padding="5dp"
                 android:text="Age Limit"
                 android:textAlignment="center"
                 android:textColor="@color/black" />
@@ -115,7 +116,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="3dp"
                 android:layout_weight="1"
-                android:padding="3dp"
+                android:padding="5dp"
                 android:text="Avaliablity"
                 android:textAlignment="center"
                 android:textColor="@color/black" />

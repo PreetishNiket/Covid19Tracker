@@ -1,57 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="#F4FAFF"
     tools:context=".VaccineActivity">
     <RelativeLayout
+        android:id="@+id/card_layout"
+        android:background="#F4FAFF"
         android:layout_width="wrap_content"
-        android:backgroundTint="@color/dark_red"
         android:layout_height="wrap_content">
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
 
-            android:layout_toStartOf="@id/idBtnSearch">
+        <EditText
+            android:id="@+id/idEdtPinCode"
+            android:layout_width="279dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:padding="13dp"
+            android:background="@drawable/edittext_back"
+            android:hint="Search By PinCode"
+            android:inputType="number"
+            android:textColorHint="@color/dark_red"
+            android:textColor="@color/dark_red" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/idEdtPinCode"
-                android:layout_width="match_parent"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/idBtnSearch"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:layout_margin="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:backgroundTint="#FFE6E6"
+                android:text="Search"
+               android:layout_alignParentEnd="true"
+                android:textAllCaps="false"
                 android:textColor="@color/dark_red"
-                android:layout_toStartOf="@id/idBtnSearch"
-                android:hint="Search By PinCode"
+                app:cornerRadius="5dp"
+                app:rippleColor="#fff"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp" />
 
-                android:textColorHint="@android:color/holo_purple"
-                android:inputType="number" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+
 
 
         <!--button for searchng the data-->
-        <Button
-            android:id="@+id/idBtnSearch"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_alignParentEnd="true"
-            android:layout_margin="5dp"
-            android:background="@drawable/rounded_border"
-            android:text="Search"
-            android:textAllCaps="false" />
 
     </RelativeLayout>
-
-
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/centersRV"
+        android:layout_below="@+id/card_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="54dp"
+
         tools:listitem="@layout/item_rv" />
 
 </RelativeLayout>

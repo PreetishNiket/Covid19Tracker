@@ -13,7 +13,7 @@ class SpannableDelta(langName: String, langColor: String, start: Int) : Spannabl
 
             start,
             langName.length,
-            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+            Spannable.SPAN_INCLUSIVE_EXCLUSIVE
         )
     }
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#190F52"
     tools:context=".SplashScreenActivity">
 
     <ImageView
@@ -28,10 +28,10 @@
         android:layout_height="57dp"
         android:shadowColor="@color/black"
         android:shadowRadius="5"
-        android:text="Covid-19 Tracker"
+        android:text="@string/covid_19_tracker"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textColor="#f21105"
+        android:textColor="#707070"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

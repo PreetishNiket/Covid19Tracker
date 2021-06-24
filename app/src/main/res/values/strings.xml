@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Covid19Tracker</string>
     <string name="logo">logo</string>
-    <string name="statistics_vaccine_tracker">Statistics/Vaccine Tracker</string>
+    <string name="statistics_vaccine_tracker">Statistics|Vaccine Tracker</string>
     <string name="confirmed">Confirmed</string>
     <string name="active">Active        </string>
     <string name="deceased">Deceased</string>

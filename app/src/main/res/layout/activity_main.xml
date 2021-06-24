@@ -66,12 +66,7 @@
                 android:textColor="@android:color/holo_red_light"
                 android:textSize="19sp"
                 android:textStyle="bold" />
-            <!--            <ImageView&ndash;&gt;-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:src="@drawable/ic_indian"-->
-            <!--                android:layout_marginTop="43dp"-->
-            <!--                android:layout_marginLeft="90dp" />-->
+
             <LinearLayout
                 android:id="@+id/topContainer"
                 android:layout_width="match_parent"
@@ -87,13 +82,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="20dp"
                     android:layout_weight="1"
-                    android:background="@drawable/rounded_border"
+                    android:background="@drawable/border_confirmed"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
                         android:text="@string/confirmed"
                         android:textAllCaps="true"
                         android:textColor="@color/confirmed"
@@ -106,30 +102,25 @@
                         android:layout_marginTop="4dp"
                         android:backgroundTint="@color/confirmed"
                         android:src="@drawable/virus" />
-                    <!--                        android:src="@drawable/ic_corona_virus"-->
-
 
                     <TextView
                         android:id="@+id/confirmedTv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:layout_marginBottom="3dp"
                         android:textAllCaps="true"
-
                         android:textColor="@color/confirmed"
                         android:textSize="15sp"
                         android:textStyle="bold" />
-
-
                 </LinearLayout>
-
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="5dp"
                     android:layout_weight="1"
-                    android:background="@drawable/rounded_border"
+                    android:background="@drawable/border_active"
                     android:gravity="center"
 
                     android:orientation="vertical">
@@ -137,6 +128,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
                         android:text="@string/active"
                         android:textAllCaps="true"
                         android:textColor="@color/active"
@@ -155,6 +147,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:layout_marginBottom="3dp"
                         android:textAllCaps="true"
                         android:textColor="@color/active"
                         android:textSize="15sp"
@@ -167,19 +160,21 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/l_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/topContainer"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="30dp">
+                android:layout_marginBottom="10dp"
+                android:baselineAligned="false">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="20dp"
                     android:layout_weight="1"
-                    android:background="@drawable/rounded_border"
+                    android:background="@drawable/border_recoverd"
                     android:gravity="center"
                     android:orientation="vertical">
 
@@ -187,6 +182,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
                         android:text="@string/recovered"
                         android:textAllCaps="true"
                         android:textColor="@color/recovered"
@@ -205,6 +201,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:layout_marginBottom="3dp"
                         android:textAllCaps="true"
                         android:textColor="@color/recovered"
                         android:textSize="15sp"
@@ -218,13 +215,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/rounded_border"
+                    android:background="@drawable/border_deceased"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
                         android:text="@string/deceased"
                         android:textAllCaps="true"
                         android:textColor="@color/deceased"
@@ -243,6 +241,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:layout_marginBottom="3dp"
                         android:textAllCaps="true"
                         android:textColor="@color/deceased"
                         android:textSize="14sp"
@@ -252,6 +251,57 @@
                 </LinearLayout>
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/l_layout"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:orientation="vertical">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/facts"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:backgroundTint="@color/white"
+                        android:text="Facts"
+                        android:textColor="@color/dark_green"
+                        app:cornerRadius="8dp"
+                        app:rippleColor="@color/white"
+                        app:strokeColor="#4B4279"
+                        app:strokeWidth="2dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/vaccine_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:backgroundTint="@color/white"
+                        android:text="Vaccine Slots"
+                        android:textColor="@color/dark_green"
+                        app:cornerRadius="8dp"
+                        app:rippleColor="#fff"
+                        app:strokeColor="#0DA7D5"
+                        app:strokeWidth="2dp" />
+                </LinearLayout>
+            </LinearLayout>
+
         </RelativeLayout>
 
         <ListView
@@ -259,126 +309,13 @@
             android:layout_width="match_parent"
             android:layout_height="358dp"
             android:layout_below="@+id/topcover"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="10dp"
             android:background="@color/white"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             tools:listheader="@layout/list_header"
             tools:listitem="@layout/list_item" />
 
-        <androidx.coordinatorlayout.widget.CoordinatorLayout
 
-            android:layout_width="399dp"
-            android:layout_height="355dp"
-            android:layout_alignParentBottom="true">
-
-            <!-- Main content -->
-
-            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                android:id="@+id/Tracker_fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|end"
-                android:layout_margin="16dp"
-                android:backgroundTint="#75292f"
-                android:elevation="30dp"
-                android:textAllCaps="false"
-                app:icon="@drawable/virus"
-                app:rippleColor="@color/recovered" />
-
-
-            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                android:id="@+id/Essentials_fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|end"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="80dp"
-                android:backgroundTint="@color/fab_extras"
-                android:elevation="30dp"
-                android:text="Crucial"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:visibility="invisible"
-                app:iconTint="@color/recovered"
-                app:rippleColor="@color/recovered" />
-            <!--                app:icon="@drawable/ic_essentials"-->
-
-            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                android:id="@+id/Prevention_fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|end"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="134dp"
-                android:backgroundTint="@color/fab_extras"
-                android:elevation="30dp"
-                android:text="Prevention"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:visibility="invisible"
-                app:iconTint="@color/recovered"
-                app:rippleColor="@color/recovered" />
-            <!--            app:icon="@drawable/ic_prevention"-->
-
-            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                android:id="@+id/Symptoms_fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|end"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="188dp"
-                android:backgroundTint="@color/fab_extras"
-
-                android:elevation="30dp"
-                android:text="Symptoms"
-
-                android:textAllCaps="false"
-                android:textColor="@android:color/white"
-                android:visibility="invisible"
-                app:iconTint="@color/recovered"
-
-
-                app:rippleColor="@color/recovered" />
-            <!--            app:icon="@drawable/ic_symptoms"-->
-
-            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                android:id="@+id/About_fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|end"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="242dp"
-
-                android:backgroundTint="@color/fab_extras"
-                android:elevation="30dp"
-                android:text="Covid-19"
-
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:visibility="invisible"
-                app:icon="@drawable/virus"
-                app:iconTint="@color/recovered"
-                app:rippleColor="@color/recovered" />
-
-            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                android:id="@+id/Vaccine_fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|end"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="299dp"
-
-                android:backgroundTint="@color/fab_extras"
-                android:elevation="30dp"
-                android:text="Vaccine Slots"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:visibility="invisible"
-                app:icon="@drawable/virus"
-                app:iconTint="@color/recovered"
-                app:rippleColor="@color/recovered" />
-
-        </androidx.coordinatorlayout.widget.CoordinatorLayout>
     </RelativeLayout>
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

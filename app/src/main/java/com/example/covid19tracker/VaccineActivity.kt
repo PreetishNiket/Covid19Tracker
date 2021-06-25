@@ -1,32 +1,37 @@
 package com.example.covid19tracker
 
 import android.app.DatePickerDialog
-import android.app.DownloadManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.Request
-import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
-import com.android.volley.toolbox.JsonRequest
 import com.android.volley.toolbox.Volley
 import com.example.covid19tracker.dataClass.SlotModal
 import com.example.covid19tracker.listView.RecyclerViewAdapter
+import com.takusemba.spotlight.SimpleTarget
+import com.takusemba.spotlight.Spotlight
 import kotlinx.android.synthetic.main.activity_vaccine.*
 import org.json.JSONException
 import java.util.*
 import kotlin.collections.ArrayList
 
 class VaccineActivity : AppCompatActivity() {
-    lateinit var centerList: List<SlotModal>
+    private lateinit var centerList: List<SlotModal>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vaccine)
         supportActionBar?.hide()
         centerList = ArrayList()
+
+//        val TargetOne = SimpleTarget.Builder(this)
+//
+//        val spotlight =Spotlight.with(this)
+//            .setTargets(TargetOne)
+
 
         idBtnSearch.setOnClickListener {
             val pinCode = idEdtPinCode.text.toString()
@@ -46,7 +51,7 @@ class VaccineActivity : AppCompatActivity() {
 //                    loadingPB.setVisibility(View.VISIBLE)
 
                         // on below line we are creating a date string for our date
-                        val dateStr= """$dayOfMonth - ${monthOfYear + 1} - $year"""
+                        val dateStr = """$dayOfMonth - ${monthOfYear + 1} - $year"""
 
                         // on below line we are calling a method to get
                         // the appointment info for vaccination centers
@@ -55,7 +60,8 @@ class VaccineActivity : AppCompatActivity() {
                     },
                     year,
                     month,
-                    day)
+                    day
+                )
                 dpd.show()
             }
         }
@@ -85,7 +91,7 @@ class VaccineActivity : AppCompatActivity() {
                     val centerArray = response.getJSONArray("centers")
 
                     // on below line we are checking if the length of the array is 0.
-                    // the zero length indicates that there is no data for the given pincode.
+                    // the zero length indicates that there is no data for the given pin code.
                     if (centerArray.length() == 0) {
                         Toast.makeText(this, "No Center Found", Toast.LENGTH_SHORT).show()
                     }
@@ -100,13 +106,13 @@ class VaccineActivity : AppCompatActivity() {
                         val centerAddress: String = centerObj.getString("address")
                         val centerFromTime: String = centerObj.getString("from")
                         val centerToTime: String = centerObj.getString("to")
-                        val fee_type: String = centerObj.getString("fee_type")
+                        val feeType: String = centerObj.getString("fee_type")
 
                         // on below line we are creating a variable for our session object
                         val sessionObj = centerObj.getJSONArray("sessions").getJSONObject(0)
                         val ageLimit: Int = sessionObj.getInt("min_age_limit")
                         val vaccineName: String = sessionObj.getString("vaccine")
-                        val avaliableCapacity: Int = sessionObj.getInt("available_capacity")
+                        val availableCapacity: Int = sessionObj.getInt("available_capacity")
 
                         // after extracting all the data we are passing this
                         // data to our modal class we have created
@@ -116,10 +122,10 @@ class VaccineActivity : AppCompatActivity() {
                             centerAddress,
                             centerFromTime,
                             centerToTime,
-                            fee_type,
+                            feeType,
                             ageLimit,
                             vaccineName,
-                            avaliableCapacity
+                            availableCapacity
                         )
                         // after that we are passing this modal to our list on the below line.
                         centerList = centerList + center
@@ -136,7 +142,7 @@ class VaccineActivity : AppCompatActivity() {
 
                 } catch (e: JSONException) {
                     // below line is for handling json exception.
-                    e.printStackTrace();
+                    e.printStackTrace()
                 }
             },
                 { error ->

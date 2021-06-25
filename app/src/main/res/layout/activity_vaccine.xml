@@ -21,8 +21,10 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:padding="13dp"
+            android:clickable="true"
+
             android:background="@drawable/edittext_back"
-            android:hint="Search By PinCode"
+            android:hint="@string/search_by_pincode"
             android:inputType="number"
             android:textColorHint="@color/dark_red"
             android:textColor="@color/dark_red" />

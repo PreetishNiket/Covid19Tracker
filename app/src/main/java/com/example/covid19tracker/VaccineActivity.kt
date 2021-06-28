@@ -1,22 +1,26 @@
 package com.example.covid19tracker
 
 import android.app.DatePickerDialog
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.example.covid19tracker.dataClass.SlotModal
 import com.example.covid19tracker.listView.RecyclerViewAdapter
-import com.takusemba.spotlight.SimpleTarget
-import com.takusemba.spotlight.Spotlight
 import kotlinx.android.synthetic.main.activity_vaccine.*
 import org.json.JSONException
+import smartdevelop.ir.eram.showcaseviewlib.GuideView
+import smartdevelop.ir.eram.showcaseviewlib.config.DismissType
+import smartdevelop.ir.eram.showcaseviewlib.config.Gravity
+import smartdevelop.ir.eram.showcaseviewlib.listener.GuideListener
 import java.util.*
 import kotlin.collections.ArrayList
+
 
 class VaccineActivity : AppCompatActivity() {
     private lateinit var centerList: List<SlotModal>
@@ -27,10 +31,25 @@ class VaccineActivity : AppCompatActivity() {
         supportActionBar?.hide()
         centerList = ArrayList()
 
-//        val TargetOne = SimpleTarget.Builder(this)
-//
-//        val spotlight =Spotlight.with(this)
-//            .setTargets(TargetOne)
+        val pinCode_show = GuideView.Builder(this)
+            .setTitle("Search By PinCode")
+            .setContentText("Enter Valid Pin code\n To find slots")
+            .setGravity(Gravity.center)
+            .setDismissType(DismissType.targetView)
+            .setTargetView(idEdtPinCode)
+            .setContentTextSize(12) //optional
+            .setTitleTextSize(14) //optional
+            .build()
+            .show()
+        val search_show = GuideView.Builder(this)
+            .setTitle("Find Slots")
+//                        .setContentText("Enter Valid Pin code\n To find slots")
+            .setGravity(Gravity.auto) //optional
+            .setDismissType(DismissType.targetView) //optional - default DismissType.targetView
+            .setTargetView(idBtnSearch)
+            .setTitleTextSize(14) //optional
+            .build()
+            .show()
 
 
         idBtnSearch.setOnClickListener {

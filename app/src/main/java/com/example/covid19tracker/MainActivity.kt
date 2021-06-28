@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.AbsListView
+import android.widget.Button
 
 import com.example.covid19tracker.dataClass.Response
 import com.example.covid19tracker.dataClass.StatewiseItem
@@ -36,7 +37,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this,VaccineActivity::class.java))
         }
         facts.setOnClickListener {
-//            startActivity(Intent(this,FactsActivity::class.java))
+            startActivity(Intent(this,FactsActivity::class.java))
         }
         list.addHeaderView(
             LayoutInflater.from(this)

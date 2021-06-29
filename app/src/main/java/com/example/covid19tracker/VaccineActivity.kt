@@ -17,7 +17,6 @@ import org.json.JSONException
 import smartdevelop.ir.eram.showcaseviewlib.GuideView
 import smartdevelop.ir.eram.showcaseviewlib.config.DismissType
 import smartdevelop.ir.eram.showcaseviewlib.config.Gravity
-import smartdevelop.ir.eram.showcaseviewlib.listener.GuideListener
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -31,26 +30,29 @@ class VaccineActivity : AppCompatActivity() {
         supportActionBar?.hide()
         centerList = ArrayList()
 
-        val pinCode_show = GuideView.Builder(this)
+        val pinCodeShow = GuideView.Builder(this)
             .setTitle("Search By PinCode")
             .setContentText("Enter Valid Pin code\n To find slots")
             .setGravity(Gravity.center)
             .setDismissType(DismissType.targetView)
+            .setGuideListener {
+                if (it.visibility==View.VISIBLE){
+
+                    val searchShow = GuideView.Builder(this)
+                        .setTitle("Find Slots")
+                        .setGravity(Gravity.center) //optional
+                        .setDismissType(DismissType.anywhere) //optional - default DismissType.targetView
+                        .setTargetView(idBtnSearch)
+                        .setTitleTextSize(14) //optional
+                        .build()
+                        .show()
+                }
+            }
             .setTargetView(idEdtPinCode)
             .setContentTextSize(12) //optional
             .setTitleTextSize(14) //optional
             .build()
             .show()
-        val search_show = GuideView.Builder(this)
-            .setTitle("Find Slots")
-//                        .setContentText("Enter Valid Pin code\n To find slots")
-            .setGravity(Gravity.auto) //optional
-            .setDismissType(DismissType.targetView) //optional - default DismissType.targetView
-            .setTargetView(idBtnSearch)
-            .setTitleTextSize(14) //optional
-            .build()
-            .show()
-
 
         idBtnSearch.setOnClickListener {
             val pinCode = idEdtPinCode.text.toString()

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#43FBF0F0"
+    tools:context=".PreventionActivity">
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="178dp"
+        android:layout_height="172dp"
+        android:src="@drawable/mask"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="25dp" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="178dp"
+        android:layout_height="172dp"
+        android:src="@drawable/hands"
+        android:layout_marginTop="230dp"
+        android:layout_marginStart="200dp" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="178dp"
+        android:layout_height="172dp"
+        android:src="@drawable/noserog"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="200dp" />
+
+    <ImageView
+        android:layout_width="178dp"
+        android:layout_height="172dp"
+        android:src="@drawable/animal"
+        android:layout_marginTop="230dp"
+        android:layout_marginStart="25dp"/>
+
+    <ImageView
+        android:layout_width="347dp"
+        android:layout_height="242dp"
+        android:layout_marginTop="410dp"
+        android:layout_marginStart="28dp"
+        android:src="@drawable/home" />
+
+
+</RelativeLayout>

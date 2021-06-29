@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E7E7E8"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#EDEDFB"
     tools:context=".FactsActivity">
 
     <ImageButton
@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/symptoms"
         android:layout_marginTop="70dp"
+        android:clickable="false"
         android:layout_centerHorizontal="true"/>
 
     <TextView
@@ -26,6 +27,7 @@
         android:textSize="15sp"
         android:textStyle="bold" />
     <ImageButton
+        android:clickable="false"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/preventions"
@@ -42,5 +44,20 @@
         android:textColor="#14CB82"
         android:textSize="15sp"
         android:textStyle="bold" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:backgroundTint="@color/white"
+        android:text="Back"
+        android:textColor="@color/dark_blue"
+        app:cornerRadius="8dp"
+        app:rippleColor="@color/white"
+        app:strokeColor="#4B4279"
+        app:strokeWidth="2dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"/>
 
 </RelativeLayout>

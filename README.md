@@ -21,3 +21,14 @@
  <li><a href="https://developer.android.com/reference/android/widget/ListView" >List View<a/></li>
  <li><a href="https://developer.android.com/guide/topics/ui/declaring-layout" >XML<a/></li>
 </ul>
+<h2>Module 2</h2>
+<h3>Facts Activity</h3>
+<p>This Tab/activity is reached when Facts button is clicked. There are two categories :-</p>
+<ol>
+ <li>Symptoms</li>
+ <li>Prevention</li>
+</ol>
+<p>They lead to their respective tabs which will give basic knowledge about symptoms and prevention measures about COVID-19</p>
+<h2>Module 3</h2>
+<h3>Vaccine Slot Availability Checker</h3>
+<p>By fetching data from COVID vaccine slot tracker API. This activity will give user all necessary details like [center name, center location coma time slot, name of the vaccine, charge of the vaccine call mom age limit and availability according to the date entered search by the district pin code.</p>

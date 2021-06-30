@@ -103,7 +103,7 @@
         android:id="@+id/imageView4"
         android:layout_width="178dp"
         android:layout_height="172dp"
-        android:src="@drawable/runnose"
+        android:src="@drawable/run"
         android:layout_marginTop="430dp"
         android:layout_marginStart="200dp"/>
 
@@ -118,7 +118,21 @@
         android:layout_below="@id/imageView4"
         android:layout_marginStart="240dp"/>
 
-
+<!--    <com.google.android.material.button.MaterialButton-->
+<!--        android:id="@+id/back"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="10dp"-->
+<!--        android:backgroundTint="@color/white"-->
+<!--        android:text="Back"-->
+<!--        android:textColor="@color/dark_blue"-->
+<!--        app:cornerRadius="8dp"-->
+<!--        app:rippleColor="@color/white"-->
+<!--        app:strokeColor="#4B4279"-->
+<!--        app:strokeWidth="2dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="650dp"-->
+<!--        android:layout_marginBottom="30dp"/>-->
 
 
 </RelativeLayout>

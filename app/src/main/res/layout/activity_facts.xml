@@ -7,40 +7,41 @@
     android:background="#EDEDFB"
     tools:context=".FactsActivity">
 
-    <ImageButton
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/symptoms"
         android:layout_marginTop="70dp"
         android:clickable="false"
+        android:layout_marginStart="13dp"
         android:layout_centerHorizontal="true"/>
 
     <TextView
         android:id="@+id/symp_tv"
-        android:layout_width="115dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="200dp"
-        android:layout_marginTop="221dp"
+        android:layout_marginTop="210dp"
         android:background="#FFE8F1"
-        android:text="Learn More ->"
+        android:text="Learn More      ->"
         android:textColor="#FC86B0"
         android:textSize="15sp"
         android:textStyle="bold" />
-    <ImageButton
+    <ImageView
         android:clickable="false"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/preventions"
-        android:layout_marginTop="370dp"
+        android:layout_marginTop="340dp"
         android:layout_centerHorizontal="true"/>
     <TextView
         android:id="@+id/preven_tv"
-        android:layout_width="115dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="200dp"
-        android:layout_marginTop="521dp"
+        android:layout_marginTop="480dp"
         android:background="#DCFFF1"
-        android:text="Learn More ->"
+        android:text="Learn More      ->"
         android:textColor="#14CB82"
         android:textSize="15sp"
         android:textStyle="bold" />

@@ -9,5 +9,8 @@ class PreventionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_prevention)
         supportActionBar?.hide()
+        back.setOnClickListener {
+            finish()
+        }
     }
 }

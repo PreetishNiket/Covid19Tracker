@@ -9,5 +9,8 @@ class SymptomsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_symptoms)
         supportActionBar?.hide()
+//        back.setOnClickListener {
+//            finish()
+//        }
     }
 }

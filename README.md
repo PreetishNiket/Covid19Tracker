@@ -39,8 +39,8 @@
 <h3>Vaccine Slot Availability Checker</h3>
 <p>By fetching data from COVID vaccine slot tracker API. This activity will give user all necessary details like [center name, center location coma time slot, name of the vaccine, charge of the vaccine, age limit and availability according to the date entered search by the district pin code.</p>
 <p>
-  <img src="https://github.com/PreetishNiket/Covid19Tracker/blob/master/app/sampledata/ss5.png" width="250"/>
-  <img src="https://github.com/PreetishNiket/Covid19Tracker/blob/master/app/sampledata/ss6.png" width="250"/> 
+  <img src="https://github.com/PreetishNiket/Covid19Tracker/blob/master/app/sampledata/ss5.png" width="258"/>
+  <img src="https://github.com/PreetishNiket/Covid19Tracker/blob/master/app/sampledata/ss6.png" width="276"/> 
 </p>
 <br>
 <p>
